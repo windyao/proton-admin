@@ -1,6 +1,10 @@
+<p align="center">
+  <img width="320" src="https://github.com/windyao/proton-admin/blob/master/title.png">
+</p>
+
 # Proton Admin
 
-Proton Admin是在大神[PanJiaChen](https://github.com/PanJiaChen)的力作[Vue Element Admin](https://github.com/PanJiaChen/vue-element-admin)基础上改建而来的一个Electron项目。
+Proton Admin是一个, 在大神[PanJiaChen](https://github.com/PanJiaChen)的力作: [Vue Element Admin](https://github.com/PanJiaChen/vue-element-admin)基础上改建而来的**Electron**项目。
 
 ## Getting started
 
