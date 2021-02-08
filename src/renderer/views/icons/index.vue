@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import clipboard from '@/renderer/utils/clipboard'
+import clipboard from '@/utils/clipboard'
 import svgIcons from './svg-icons'
 import elementIcons from './element-icons'
 

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { isExternal } from '@/renderer/utils/validate'
+import { isExternal } from '@/utils/validate'
 
 export default {
   props: {

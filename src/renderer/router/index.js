@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 /* Layout */
-import Layout from '@/renderer/layout'
+import Layout from '@/layout'
 
 /* Router Modules */
 import componentsRouter from './modules/components'
@@ -46,28 +46,28 @@ export const constantRoutes = [
     children: [
       {
         path: '/redirect/:path(.*)',
-        component: () => import('@/renderer/views/redirect/index')
+        component: () => import('@/views/redirect/index')
       }
     ]
   },
   {
     path: '/login',
-    component: () => import('@/renderer/views/login/index'),
+    component: () => import('@/views/login/index'),
     hidden: true
   },
   {
     path: '/auth-redirect',
-    component: () => import('@/renderer/views/login/auth-redirect'),
+    component: () => import('@/views/login/auth-redirect'),
     hidden: true
   },
   {
     path: '/404',
-    component: () => import('@/renderer/views/error-page/404'),
+    component: () => import('@/views/error-page/404'),
     hidden: true
   },
   {
     path: '/401',
-    component: () => import('@/renderer/views/error-page/401'),
+    component: () => import('@/views/error-page/401'),
     hidden: true
   },
   {
@@ -77,7 +77,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'dashboard',
-        component: () => import('@/renderer/views/dashboard/index'),
+        component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
         meta: { title: '仪表盘', icon: 'dashboard', affix: true }
       }
@@ -90,7 +90,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'index',
-        component: () => import('@/renderer/views/guide/index'),
+        component: () => import('@/views/guide/index'),
         name: 'Guide',
         meta: { title: '功能指引', icon: 'guide', noCache: true }
       }
@@ -104,7 +104,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'index',
-        component: () => import('@/renderer/views/profile/index'),
+        component: () => import('@/views/profile/index'),
         name: 'Profile',
         meta: { title: 'Profile', icon: 'user', noCache: true }
       }
@@ -131,7 +131,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'page',
-        component: () => import('@/renderer/views/permission/page'),
+        component: () => import('@/views/permission/page'),
         name: 'PagePermission',
         meta: {
           title: '页面权限',
@@ -140,7 +140,7 @@ export const asyncRoutes = [
       },
       {
         path: 'directive',
-        component: () => import('@/renderer/views/permission/directive'),
+        component: () => import('@/views/permission/directive'),
         name: 'DirectivePermission',
         meta: {
           title: '指令权限'
@@ -149,7 +149,7 @@ export const asyncRoutes = [
       },
       {
         path: 'role',
-        component: () => import('@/renderer/views/permission/role'),
+        component: () => import('@/views/permission/role'),
         name: 'RolePermission',
         meta: {
           title: '角色权限',
@@ -177,20 +177,20 @@ export const asyncRoutes = [
     children: [
       {
         path: 'create',
-        component: () => import('@/renderer/views/example/create'),
+        component: () => import('@/views/example/create'),
         name: 'CreateArticle',
         meta: { title: '创建文章', icon: 'edit' }
       },
       {
         path: 'edit/:id(\\d+)',
-        component: () => import('@/renderer/views/example/edit'),
+        component: () => import('@/views/example/edit'),
         name: 'EditArticle',
         meta: { title: '编辑文章', noCache: true, activeMenu: '/example/list' },
         hidden: true
       },
       {
         path: 'list',
-        component: () => import('@/renderer/views/example/list'),
+        component: () => import('@/views/example/list'),
         name: 'ArticleList',
         meta: { title: '文章列表', icon: 'list' }
       }
@@ -209,13 +209,13 @@ export const asyncRoutes = [
     children: [
       {
         path: '401',
-        component: () => import('@/renderer/views/error-page/401'),
+        component: () => import('@/views/error-page/401'),
         name: 'Page401',
         meta: { title: '401', noCache: true }
       },
       {
         path: '404',
-        component: () => import('@/renderer/views/error-page/404'),
+        component: () => import('@/views/error-page/404'),
         name: 'Page404',
         meta: { title: '404', noCache: true }
       }
@@ -234,25 +234,25 @@ export const asyncRoutes = [
     children: [
       {
         path: 'export-excel',
-        component: () => import('@/renderer/views/excel/export-excel'),
+        component: () => import('@/views/excel/export-excel'),
         name: 'ExportExcel',
         meta: { title: '导出Excel' }
       },
       {
         path: 'export-selected-excel',
-        component: () => import('@/renderer/views/excel/select-excel'),
+        component: () => import('@/views/excel/select-excel'),
         name: 'SelectExcel',
         meta: { title: '导出选中项' }
       },
       {
         path: 'export-merge-header',
-        component: () => import('@/renderer/views/excel/merge-header'),
+        component: () => import('@/views/excel/merge-header'),
         name: 'MergeHeader',
         meta: { title: '合并表头' }
       },
       {
         path: 'upload-excel',
-        component: () => import('@/renderer/views/excel/upload-excel'),
+        component: () => import('@/views/excel/upload-excel'),
         name: 'UploadExcel',
         meta: { title: '导入Excel' }
       }
@@ -269,7 +269,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'download',
-        component: () => import('@/renderer/views/zip/index'),
+        component: () => import('@/views/zip/index'),
         name: 'ExportZip',
         meta: { title: '导出Zip' }
       }
@@ -283,7 +283,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'index',
-        component: () => import('@/renderer/views/pdf/index'),
+        component: () => import('@/views/pdf/index'),
         name: 'PDF',
         meta: { title: 'PDF', icon: 'pdf' }
       }
@@ -291,7 +291,7 @@ export const asyncRoutes = [
   },
   {
     path: '/pdf/download',
-    component: () => import('@/renderer/views/pdf/download'),
+    component: () => import('@/views/pdf/download'),
     hidden: true
   },
   {
@@ -300,7 +300,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'index',
-        component: () => import('@/renderer/views/clipboard/index'),
+        component: () => import('@/views/clipboard/index'),
         name: 'ClipboardDemo',
         meta: { title: '剪贴板', icon: 'clipboard' }
       }

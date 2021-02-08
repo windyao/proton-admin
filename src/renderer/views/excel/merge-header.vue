@@ -46,8 +46,8 @@
 </template>
 
 <script>
-import { fetchList } from '@/renderer/api/article'
-import { parseTime } from '@/renderer/utils'
+import { fetchList } from '@/api/article'
+import { parseTime } from '@/utils'
 
 export default {
   name: 'MergeHeader',
@@ -71,7 +71,7 @@ export default {
     },
     handleDownload() {
       this.downloadLoading = true
-      import('@/renderer/vendor/Export2Excel').then(excel => {
+      import('@/vendor/Export2Excel').then(excel => {
         const multiHeader = [['Id', 'Main Information', '', '', 'Date']]
         const header = ['', 'Title', 'Author', 'Readings', '']
         const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time']

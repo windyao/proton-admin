@@ -57,8 +57,8 @@
 </template>
 
 <script>
-import { fetchList } from '@/renderer/api/article'
-import Pagination from '@/renderer/components/Pagination' // Secondary package based on el-pagination
+import { fetchList } from '@/api/article'
+import Pagination from '@/components/Pagination' // Secondary package based on el-pagination
 
 export default {
   name: 'ArticleList',

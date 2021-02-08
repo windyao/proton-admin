@@ -45,8 +45,8 @@
 </template>
 
 <script>
-import { fetchList } from '@/renderer/api/article'
-import { parseTime } from '@/renderer/utils'
+import { fetchList } from '@/api/article'
+import { parseTime } from '@/utils'
 // options components
 import FilenameOption from './components/FilenameOption'
 import AutoWidthOption from './components/AutoWidthOption'
@@ -78,7 +78,7 @@ export default {
     },
     handleDownload() {
       this.downloadLoading = true
-      import('@/renderer/vendor/Export2Excel').then(excel => {
+      import('@/vendor/Export2Excel').then(excel => {
         const tHeader = ['Id', 'Title', 'Author', 'Readings', 'Date']
         const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time']
         const list = this.list

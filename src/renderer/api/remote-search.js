@@ -1,4 +1,4 @@
-import request from '@/renderer/utils/request'
+import request from '@/utils/request'
 
 export function searchUser(name) {
   return request({

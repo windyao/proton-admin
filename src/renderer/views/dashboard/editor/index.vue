@@ -19,8 +19,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import PanThumb from '@/renderer/components/PanThumb'
-import GithubCorner from '@/renderer/components/GithubCorner'
+import PanThumb from '@/components/PanThumb'
+import GithubCorner from '@/components/GithubCorner'
 
 export default {
   name: 'DashboardEditor',

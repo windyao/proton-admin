@@ -1,4 +1,4 @@
-import { debounce } from '@/renderer/utils'
+import { debounce } from '@/utils'
 
 export default {
   data() {

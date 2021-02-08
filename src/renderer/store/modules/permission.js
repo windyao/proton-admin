@@ -1,4 +1,4 @@
-import { asyncRoutes, constantRoutes } from '@/renderer/router'
+import { asyncRoutes, constantRoutes } from '@/router'
 
 /**
  * Use meta.role to determine if the current user has permission

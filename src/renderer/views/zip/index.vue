@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import { fetchList } from '@/renderer/api/article'
+import { fetchList } from '@/api/article'
 
 export default {
   name: 'ExportZip',
@@ -60,7 +60,7 @@ export default {
     },
     handleDownload() {
       this.downloadLoading = true
-      import('@/renderer/vendor/Export2Zip').then(zip => {
+      import('@/vendor/Export2Zip').then(zip => {
         const tHeader = ['Id', 'Title', 'Author', 'Readings', 'Date']
         const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time']
         const list = this.list

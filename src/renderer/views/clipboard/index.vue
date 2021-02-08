@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import clip from '@/renderer/utils/clipboard' // use clipboard directly
-import clipboard from '@/renderer/directive/clipboard/index.js' // use clipboard by v-directive
+import clip from '@/utils/clipboard' // use clipboard directly
+import clipboard from '@/directive/clipboard/index.js' // use clipboard by v-directive
 
 export default {
   name: 'ClipboardDemo',

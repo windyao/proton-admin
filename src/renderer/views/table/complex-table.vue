@@ -147,10 +147,10 @@
 </template>
 
 <script>
-import { fetchList, fetchPv, createArticle, updateArticle } from '@/renderer/api/article'
-import waves from '@/renderer/directive/waves' // waves directive
-import { parseTime } from '@/renderer/utils'
-import Pagination from '@/renderer/components/Pagination' // secondary package based on el-pagination
+import { fetchList, fetchPv, createArticle, updateArticle } from '@/api/article'
+import waves from '@/directive/waves' // waves directive
+import { parseTime } from '@/utils'
+import Pagination from '@/components/Pagination' // secondary package based on el-pagination
 
 const calendarTypeOptions = [
   { key: 'CN', display_name: 'China' },
@@ -349,7 +349,7 @@ export default {
     },
     handleDownload() {
       this.downloadLoading = true
-      import('@/renderer/vendor/Export2Excel').then(excel => {
+      import('@/vendor/Export2Excel').then(excel => {
         const tHeader = ['timestamp', 'title', 'type', 'importance', 'status']
         const filterVal = ['timestamp', 'title', 'type', 'importance', 'status']
         const data = this.formatJson(filterVal)

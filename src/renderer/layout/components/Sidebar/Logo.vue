@@ -24,8 +24,8 @@ export default {
   },
   data() {
     return {
-      title: 'Proton Admin',
-      logo: require('@/renderer/assets/icon.png')
+      title: 'Proton Admin Template',
+      logo: require('@/assets/icon.png')
     }
   }
 }
@@ -55,7 +55,6 @@ export default {
     width: 100%;
 
     & .sidebar-logo {
-      height: 32px;
       vertical-align: middle;
     }
 

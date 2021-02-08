@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import { fetchList } from '@/renderer/api/article'
+import { fetchList } from '@/api/article'
 
 export default {
   name: 'SelectExcel',
@@ -79,7 +79,7 @@ export default {
     handleDownload() {
       if (this.multipleSelection.length) {
         this.downloadLoading = true
-        import('@/renderer/vendor/Export2Excel').then(excel => {
+        import('@/vendor/Export2Excel').then(excel => {
           const tHeader = ['Id', 'Title', 'Author', 'Readings', 'Date']
           const filterVal = ['id', 'title', 'author', 'pageviews', 'display_time']
           const list = this.multipleSelection

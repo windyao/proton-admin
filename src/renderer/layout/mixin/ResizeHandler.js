@@ -1,4 +1,4 @@
-import store from '@/renderer/store'
+import store from '@/store'
 
 const { body } = document
 const WIDTH = 992 // refer to Bootstrap's responsive design

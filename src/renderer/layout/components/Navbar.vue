@@ -44,12 +44,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Breadcrumb from '@/renderer/components/Breadcrumb'
-import Hamburger from '@/renderer/components/Hamburger'
-import ErrorLog from '@/renderer/components/ErrorLog'
-import Screenfull from '@/renderer/components/Screenfull'
-import SizeSelect from '@/renderer/components/SizeSelect'
-import Search from '@/renderer/components/HeaderSearch'
+import Breadcrumb from '@/components/Breadcrumb'
+import Hamburger from '@/components/Hamburger'
+import ErrorLog from '@/components/ErrorLog'
+import Screenfull from '@/components/Screenfull'
+import SizeSelect from '@/components/SizeSelect'
+import Search from '@/components/HeaderSearch'
 
 export default {
   components: {

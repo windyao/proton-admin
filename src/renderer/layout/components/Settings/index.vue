@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import ThemePicker from '@/renderer/components/ThemePicker'
+import ThemePicker from '@/components/ThemePicker'
 
 export default {
   components: { ThemePicker },

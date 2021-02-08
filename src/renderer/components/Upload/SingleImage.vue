@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { getToken } from '@/renderer/api/qiniu'
+import { getToken } from '@/api/qiniu'
 
 export default {
   name: 'SingleImageUpload',
@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "~@/renderer/styles/mixin.scss";
+    @import "~@/styles/mixin.scss";
     .upload-container {
         width: 100%;
         position: relative;

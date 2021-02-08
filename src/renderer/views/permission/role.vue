@@ -61,8 +61,8 @@
 
 <script>
 import path from 'path'
-import { deepClone } from '@/renderer/utils'
-import { getRoutes, getRoles, addRole, deleteRole, updateRole } from '@/renderer/api/role'
+import { deepClone } from '@/utils'
+import { getRoutes, getRoles, addRole, deleteRole, updateRole } from '@/api/role'
 
 const defaultRole = {
   key: '',
