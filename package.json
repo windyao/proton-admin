@@ -1,6 +1,6 @@
 {
   "name": "proton-admin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vue + elementui + electron admin template",
   "author": "Yaowending<yaowending@gmail.com>",
   "scripts": {
@@ -30,6 +30,7 @@
     "driver.js": "0.9.5",
     "dropzone": "5.5.1",
     "echarts": "4.2.1",
+    "electron-cookies": "github:heap/electron-cookies",
     "element-ui": "2.13.2",
     "file-saver": "2.0.1",
     "fuse.js": "3.4.4",
