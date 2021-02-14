@@ -269,6 +269,7 @@ export default {
 //reset element css of el-icon-close
 .tags-view-wrapper {
   .tags-view-item {
+    border-radius: 3px;
     .el-icon-close {
       width: 16px;
       height: 16px;
@@ -277,6 +278,7 @@ export default {
       text-align: center;
       transition: all .3s cubic-bezier(.645, .045, .355, 1);
       transform-origin: 100% 50%;
+      transform: translate(5px, -1px);
       &:before {
         transform: scale(.6);
         display: inline-block;

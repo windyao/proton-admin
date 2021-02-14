@@ -3,6 +3,8 @@ const path = require('path')
 import { app, protocol, BrowserWindow, Tray, ipcMain, screen } from 'electron'
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib'
 import { VUEJS_DEVTOOLS } from 'electron-devtools-installer'
+const windowStateKeeper = require('electron-window-state')
+
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Scheme must be registered before the app is ready
@@ -10,14 +12,23 @@ protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true }}
 ])
 
+
+let win
+
 async function createWindow() {
   // Create the browser window.
   let size = screen.getPrimaryDisplay().workAreaSize
   let width = parseInt(size.width * 0.9)
   let height = parseInt(size.height * 0.9)
-  const win = new BrowserWindow({
-    width: width,
-    height: height,
+  let mainWindowState = windowStateKeeper({
+    defaultWidth: width,
+    defaultHeight: height
+  })
+  win = new BrowserWindow({
+    'x': mainWindowState.x,
+    'y': mainWindowState.y,
+    'width': mainWindowState.width,
+    'height': mainWindowState.height,
     frame: false,
     webPreferences: {
       contextIsolation: true,
@@ -27,6 +38,8 @@ async function createWindow() {
     },
     show: false
   })
+
+  mainWindowState.manage(win)
 
   win.on('ready-to-show', function() {
     win.show() // 初始化后再显示
@@ -38,6 +51,7 @@ async function createWindow() {
   // 最小化
   ipcMain.on('minimize', () => {
     try {
+      console.log('minimize')
       win.minimize()
     } catch (err) {
       console.log(err)
@@ -62,6 +76,7 @@ async function createWindow() {
   // 关闭窗口
   ipcMain.on('close', () => {
     try {
+      console.log('minimize')
       win.close()
     } catch (err) {
       console.log(err)

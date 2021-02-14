@@ -42,11 +42,11 @@ export default {
       if (value && !this.clickNotClose) {
         this.addEventClick()
       }
-      if (value) {
-        addClass(document.body, 'showRightPanel')
-      } else {
-        removeClass(document.body, 'showRightPanel')
-      }
+      // if (value) {
+      //   addClass(document.body, 'showRightPanel')
+      // } else {
+      //   removeClass(document.body, 'showRightPanel')
+      // }
     }
   },
   mounted() {
@@ -125,6 +125,7 @@ export default {
 }
 
 .handle-button {
+  display: none;
   width: 48px;
   height: 48px;
   position: absolute;

@@ -41,26 +41,38 @@ window.onload = function() {
   // 为打开的页面注入样式
   const css = `.catpoint-electron-navbar {
     position: fixed;
-    top: 0;
+    top: 6px;
+    left: 6px;
+    right: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     height: 30px;
     padding: 0 12px;
     color: #fff;
-    background: rgb(24, 33, 43);
-    border: 1px solid rgb(24, 33, 43);
-    border-width: 1px 0;
+    background: #11182c;
+    border-radius: 4px 4px 0 0;
     -webkit-app-region: drag;
     cursor: move;
-    z-index: 2;
+    z-index: 40000;
     box-sizing: border-box;
   }
   #app {
     position: relative;
     z-index: 1;
-    margin-top: 30px;
+    padding-top: 30px;
+    border: 6px solid #141c34;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #141c34;
+  }
+  #app .sidebar-container {
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+    height: auto;
+    border-radius: 4px 0 0 4px;
   }
   .catpoint-electron-navbar .button {
     display: inline-block;
@@ -97,6 +109,8 @@ window.onload = function() {
       if (isMaxSize === true) {
         if (key === 'maximize') {
           electronObj['unmaximize']()
+        } else {
+          electronObj[key]()
         }
       } else {
         electronObj[key]()

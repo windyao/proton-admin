@@ -45,4 +45,4 @@ npm run build:web
 
 [MIT](https://github.com/windyao/proton-admin/blob/master/LICENSE)
 
-Copyright (c) 2021-present Yaowending
+Copyright (c) 2021-present WindYao
