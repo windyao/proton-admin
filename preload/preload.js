@@ -74,6 +74,11 @@ window.onload = function() {
     height: auto;
     border-radius: 4px 0 0 4px;
   }
+  .hasTagsView .app-main, .app-main {
+    height: calc(100vh - 126px);
+    min-height: calc(100vh - 126px) !important;
+    overflow: auto;
+  }
   .catpoint-electron-navbar .button {
     display: inline-block;
     width: 18px;
